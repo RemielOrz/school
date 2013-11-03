@@ -102,10 +102,18 @@ seajs.use(['calendar','$'],function(Calendar, $){
 
 });
 
-seajs.use(['confirmbox'],function(ConfirmBox){
+/*seajs.use(['confirmbox'],function(ConfirmBox){
     var cb = new ConfirmBox({
         trigger: '.btn',
         title: '我真是标题啊'
+    });
+
+});*/
+
+seajs.use(['dialog'],function(Dialog){
+    var o = new Dialog({
+        trigger: '.btn',
+        content: '<div>这是 dialog 容器的内容</div>'
     });
 
 });
