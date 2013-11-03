@@ -9,10 +9,12 @@ seajs.config({
         'widget': 'arale/widget/1.1.1/widget',
         'tabs': 'arale/switchable/1.0.1/tabs',
         'handlebars': 'gallery/handlebars/1.0.2/handlebars',
-        'templatable': 'arale/templatable/0.9.2/templatable'
+        'templatable': 'arale/templatable/0.9.2/templatable',
+        'dialog': 'arale/dialog/1.2.4/dialog',
+        'confirmbox': 'arale/dialog/1.2.4/confirmbox'
     }
 });
-seajs.use(['widget', 'templatable', 'handlebars', '$'],function(Widget, Templatable, Handlebars, $){
+/*seajs.use(['widget', 'templatable', 'handlebars', '$'],function(Widget, Templatable, Handlebars, $){
     var StudentList =  Widget.extend({
         Implements: Templatable,
         templateHelpers:{
@@ -61,9 +63,9 @@ seajs.use(['widget', 'templatable', 'handlebars', '$'],function(Widget, Templata
         template: $('#template-student').html(),
         parentNode: '#studentView'
     }).render();
-});
+});*/
 
-seajs.use(['tabs'],function(Tabs){
+/*seajs.use(['tabs'],function(Tabs){
     tabs = new Tabs({
         element: '.main-sidebar',
         triggers: '.ui-switchable-nav li',
@@ -82,7 +84,7 @@ seajs.use(['tabs'],function(Tabs){
         activeIndex: 1,
         delay: 0
     });
-});
+});*/
 
 seajs.use(['calendar','$'],function(Calendar, $){
     var $cal = $('#send-msg-calendar'),
@@ -96,6 +98,14 @@ seajs.use(['calendar','$'],function(Calendar, $){
     });
     var cal = new Calendar({
         trigger: $cal
+    });
+
+});
+
+seajs.use(['confirmbox'],function(ConfirmBox){
+    var cb = new ConfirmBox({
+        trigger: '.btn',
+        title: '我真是标题啊'
     });
 
 });

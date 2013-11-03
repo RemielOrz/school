@@ -9,6 +9,13 @@ a,
 a:link {
   text-decoration: none;
 }
+input[type='radio'],
+input[type='checkbox'] {
+  margin-right: 4px;
+}
+textarea {
+  resize: none;
+}
 .fn-tac {
   text-align: center;
 }
@@ -103,7 +110,8 @@ body {
   line-height: 36px;
 }
 .nav-item {
-  width: 109px;
+  /*width:109px; */
+  padding: 0 28px;
   line-height: 36px;
   text-align: center;
   float: left;
@@ -147,7 +155,8 @@ body {
 .main-sidebar ul {
   margin-top: 6px;
 }
-.main-sidebar li {
+.main-sidebar li a {
+  display: block;
   width: 152px;
   line-height: 30px;
   padding-left: 28px;
@@ -159,11 +168,11 @@ body {
   position: relative;
   cursor: pointer;
 }
-.main-sidebar li,
-.main-sidebar li:link {
+.main-sidebar li a,
+.main-sidebar li a:link {
   color: #5d5e5e;
 }
-.main-sidebar li .ico {
+.main-sidebar li a .ico {
   position: absolute;
   left: 16px;
   top: 12px;
@@ -171,11 +180,11 @@ body {
   width: 5px;
   height: 8px;
 }
-.main-sidebar .active {
+.main-sidebar .active a,
+.main-sidebar .active a:link {
   background: #258cd1;
   color: #fff;
   /*border-color:#258cd1;*/
-
 }
 .main-sidebar .active .ico {
   background: url(images/ico_02.png) no-repeat;
@@ -188,8 +197,79 @@ body {
 .main-content-hd {
   border-bottom: 1px solid #cacaca;
 }
+.main-content-bd table {
+  margin: 28px 0;
+  font-size: 14px;
+}
+.main-content-bd td {
+  padding-bottom: 12px;
+  line-height: 28px;
+}
+.main-content-bd .td-01 {
+  width: 182px;
+  padding-right: 16px;
+  text-align: right;
+  vertical-align: top;
+}
+.main-content-bd .td-02 {
+  width: 428px;
+}
+.main-content-bd .td-inner {
+  border: 1px solid #cacaca;
+  overflow: hidden;
+  padding: 0 4px;
+}
+.main-content-bd .td-inner .ipt {
+  border: none;
+  outline: 0;
+  width: 100%;
+}
+.main-content-bd .td-bottom {
+  padding-top: 40px;
+}
+.main-content-bd .class-item {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-right: -3px;
+  *margin-right: -1px;
+  width: 32%;
+  text-align: center;
+}
+.main-content-bd .student-item {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin: 0 -3px 0 32px;
+}
+.main-content-bd .msg-sign-item {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-right: 4px;
+  *margin-right: 1px;
+}
 .main-content-ft {
   border-top: 1px solid #cacaca;
+}
+.main-content .btn {
+  margin-left: 14px;
+}
+#msg-content {
+  height: 72px;
+  display: block;
+}
+.textarea-box {
+  position: relative;
+}
+.textarea-box .msg-placeholder {
+  position: absolute;
+  top: 0;
+  font-size: 100%;
+  line-height: 1.5;
+}
+.textarea-box .ipt {
+  text-indent: 7em;
 }
 #send-msg-container .main-content-hd {
   text-align: center;
@@ -210,49 +290,6 @@ body {
   background: #1d7ac2;
   box-shadow: 0 0 1px #065795;
   color: #fff;
-}
-#send-msg-container .main-content-bd table {
-  margin-top: 28px;
-  font-size: 14px;
-}
-#send-msg-container .main-content-bd td {
-  padding-bottom: 12px;
-  line-height: 28px;
-}
-#send-msg-container .main-content-bd .td-01 {
-  width: 182px;
-  padding-right: 16px;
-  text-align: right;
-  vertical-align: top;
-}
-#send-msg-container .main-content-bd .td-02 {
-  width: 428px;
-}
-#send-msg-container .main-content-bd .td-inner {
-  border: 1px solid #cacaca;
-  overflow: hidden;
-}
-#send-msg-container .main-content-bd .td-inner .ipt {
-  border: none;
-  outline: 0;
-}
-#send-msg-container .main-content-bd .class-item {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  margin-right: -3px;
-  *margin-right: -1px;
-  width: 50%;
-  text-align: center;
-  border-right: 1px solid #cacaca;
-}
-#send-msg-container .main-content-bd .student-item {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
-#send-msg-container .btn {
-  margin-left: 14px;
 }
 #send-msg-calendar {
   height: 28px;

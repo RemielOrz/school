@@ -13,6 +13,10 @@
 a{
     &,&:link{text-decoration:none;}
 }
+input{
+    &[type='radio'],&[type='checkbox']{ margin-right:4px;}
+}
+textarea{resize:none;}
 
 .fn-tac{ text-align:center;}
 .fn-tal{ text-align:left;}
@@ -41,7 +45,7 @@ body{ padding-bottom:50px;}
 //nav
 .nav{ height:35px;background:#e8e8e8; border-bottom:1px solid #aaa; box-shadow:0 1px 3px rgba(0,0,0,.5);
     .container{ width:964px; padding:0 8px;line-height:36px;}
-    &-item{ width:109px; line-height:36px; text-align:center; float:left; color:#116098; font-size:14px; font-weight:bold;}
+    &-item{ /*width:109px; */ padding:0 28px;line-height:36px; text-align:center; float:left; color:#116098; font-size:14px; font-weight:bold;}
     .active{ background:#777777; color:#fff;}
 }
 
@@ -52,18 +56,41 @@ body{ padding-bottom:50px;}
     &-bd{ overflow:hidden;}
     &-sidebar{width:187px;float:left; border-right:1px solid #cacaca; margin-bottom:-9999px; padding-bottom:9999px;
         ul{ margin-top:6px;}
-        li{ width:152px; line-height:30px; padding-left:28px; margin-bottom:4px; background:#f2f2f2; border:1px solid #e1e1e1;border-radius:4px; font-size:14px;  position:relative; cursor:pointer;
-            &,&:link{color:#5d5e5e;}
-            .ico{ position:absolute; left:16px; top:12px;background:url(images/ico_03.png) no-repeat; width:5px; height:8px;}
+        li{
+            a{ display:block; width:152px; line-height:30px; padding-left:28px; margin-bottom:4px; background:#f2f2f2; border:1px solid #e1e1e1;border-radius:4px; font-size:14px;  position:relative; cursor:pointer;
+                &,&:link{color:#5d5e5e;}
+                .ico{ position:absolute; left:16px; top:12px;background:url(images/ico_03.png) no-repeat; width:5px; height:8px;}
+            }
         }
-        .active{ background:#258cd1; color:#fff;/*border-color:#258cd1;*/
+        .active{
+            a,a:link{ background:#258cd1; color:#fff;/*border-color:#258cd1;*/}
             .ico{background:url(images/ico_02.png) no-repeat;}
         }
     }
     &-content{ overflow:hidden; margin:18px 17px 18px 211px; border:1px solid #cacaca;
         &-hd{border-bottom:1px solid #cacaca;}
+        &-bd{
+            table{ margin:28px 0; font-size:14px;}
+            tr{}
+            td{ padding-bottom:12px;line-height:28px;}
+            .td-01{ width:182px; padding-right:16px;text-align:right;vertical-align:top;}
+            .td-02{ width:428px;}
+            .td-inner{border:1px solid #cacaca; overflow:hidden; padding:0 4px;
+                .ipt{ border:none; outline:0;width:100%}
+            }
+            .td-bottom{padding-top:40px;}
+            .class-item{.inline-block(); margin-right:-3px; *margin-right:-1px; width:32%; text-align:center;}
+            .student-item{.inline-block();margin:0 -3px 0 32px;}
+            .msg-sign-item{.inline-block(); margin-right:4px; *margin-right:1px;}
+        }
         &-ft{border-top:1px solid #cacaca;}
+        .btn{ margin-left:14px;}
     }
+}
+#msg-content{ height:72px; display:block;}
+.textarea-box{ position:relative;
+    .msg-placeholder{position: absolute;top:0; font-size:100%;line-height:1.5}
+    .ipt{text-indent:7em;}
 }
 #send-msg-container{
     .main-content-hd{text-align:center;
@@ -71,18 +98,7 @@ body{ padding-bottom:50px;}
         .active{background:#1d7ac2;box-shadow:0 0 1px #065795; color:#fff;}
     }
     .main-content-bd{
-        table{ margin-top:28px; font-size:14px;}
-        tr{}
-        td{ padding-bottom:12px;line-height:28px;}
-        .td-01{ width:182px; padding-right:16px;text-align:right;vertical-align:top;}
-        .td-02{ width:428px;}
-        .td-inner{border:1px solid #cacaca; overflow:hidden;
-            .ipt{ border:none; outline:0;}
-        }
-        .class-item{.inline-block(); margin-right:-3px; *margin-right:-1px; width:50%; text-align:center;border-right:1px solid #cacaca;}
-        .student-item{.inline-block();}
     }
-    .btn{ margin-left:14px;}
 }
 #send-msg-calendar{ height:28px; width:168px; text-align:center;}
 .send-msg-hour,.send-msg-minute{ width:41px; height:28px; text-align:center; margin-right:6px;}
